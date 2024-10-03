@@ -1,14 +1,14 @@
+// Order customize and add to cart page
 import { IoIosClose } from "react-icons/io";
 import Header from "../components/header";
 import { Link } from "react-router-dom";
-import CheckBox from "../components/checkbox";
 import Subheading from "../components/subheading";
 import PrimaryButton from "../components/primaryButton";
 import RamenSelection from "../components/selection";
 import { menuData } from "../data/mockData";
 import { useParams } from "react-router-dom";
+import AddCounter from "../components/counter";
 
-// EACH CARD WILL ACCESS THE DATA BASE ON ID
 function MenuItem() {
   // grab the id from the mockData
   const { id } = useParams<{ id: string }>(); // Get the ID from the URL
@@ -27,7 +27,7 @@ function MenuItem() {
           font="font-montserrat"
           size="text-[20px]"
         />
-        <p className="text-gray ">{ramenItem?.description}</p>
+        <p className="text-gray font-nunito">{ramenItem?.description}</p>
       </section>
       <div className="pb-4">
         <img
@@ -60,7 +60,7 @@ function MenuItem() {
         font="font-nunito"
       />
       <RamenSelection data={ramenItem?.soupBase} />
-
+      <AddCounter />
       <Link to={"/menu"}>
         <PrimaryButton text="Add to cart total_here" />
       </Link>
