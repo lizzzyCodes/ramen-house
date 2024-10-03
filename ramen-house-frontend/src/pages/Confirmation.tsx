@@ -1,7 +1,7 @@
 function Confirmation() {
     return (
       <div>
-        <p> card component here :) </p>
+        <p> CONFIRMATION ENABLE THE TOTAL </p>
       </div>
     );
   }

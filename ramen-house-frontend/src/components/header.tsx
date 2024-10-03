@@ -1,14 +1,19 @@
 interface HeaderProps {
   text: string;
+  font?: string; // Optional font
+  size?: string;
 }
 
-function Header({ text }: HeaderProps) {
+function Header({ text, font, size }: HeaderProps) {
+  // Determine the class based on the size prop
+
   return (
-    <div className="font-montserrat font-bold">
-      <h1>{text} </h1>
+    <div className={`${font} ${size} pt-6 font-bold`}>
+      <div>
+        <h1>{text}</h1>
+      </div>
     </div>
   );
 }
-
 export default Header;
-// small text typewriter header monsterrat?
+// subheading and  text typewriter header monsterrat?

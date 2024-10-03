@@ -28,7 +28,7 @@ export default function Card({
             <div className="font-bold text-xl mb-2 font-typewriter">
               {menuItem}
             </div>
-            <section className="text-gray text-base font-montserrat">
+            <section className="text-gray text-base font-typewriter">
               <p>{content}</p>
               <p className="pt-4 pb-4">{price}</p>
             </section>
