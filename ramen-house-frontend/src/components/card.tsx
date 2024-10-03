@@ -18,17 +18,23 @@ export default function Card({
   price,
 }: CardProps) {
   return (
-    <Link to={link || "/"}>
-      {" "}
-      {/* Fallback to '/' if link is undefined */}
-      <div className="max-w-sm rounded overflow-hidden">
-        <img className="w-full" src={imageUrl} alt="ramen item" />
-        <div className="px-6 py-4">
-          <div className="font-bold text-xl mb-2">{menuItem}</div>
-          <p className="text-gray-700 text-base">{content}</p>
-          <p className="text-gray-700 text-base">{price}</p>
+    <div className="p-4">
+      <Link to={link || "/"}>
+        {" "}
+        {/* Fallback to '/' if link is undefined */}
+        <div className="max-w-sm rounded overflow-hidden border-[#C6322D] border-2 rounded-lg">
+          <img className="w-full" src={imageUrl} alt="ramen item" />
+          <div className="px-6 py-4">
+            <div className="font-bold text-xl mb-2 font-typewriter">
+              {menuItem}
+            </div>
+            <section className="text-gray text-base font-montserrat">
+              <p>{content}</p>
+              <p className="pt-4 pb-4">{price}</p>
+            </section>
+          </div>
         </div>
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 }

@@ -7,8 +7,16 @@ interface Props {
 function Home({ imageUrl }: Props) {
   return (
     <div>
-      <img className="w-full" src={imageUrl} alt="dashboard" />
-      <button>TAP TO ORDER</button>
+      <div className="h-screen flex items-center justify-center">
+        <img
+          className="h-full w-full object-cover"
+          src={imageUrl}
+          alt="dashboard"
+        />
+      </div>
+      <button className="absolute bottom-4 left-4 bg-blue-500 text-white font-bold py-2 px-4 rounded">
+        Tap To Order
+      </button>
     </div>
   );
 }

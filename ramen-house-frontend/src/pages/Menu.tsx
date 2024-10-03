@@ -1,8 +1,10 @@
 import Card from "../components/card";
+import Header from "../components/header";
 
 function Menu() {
   return (
     <div>
+      <Header text="Ramen"/>
       <Card
         menuItem="Tonkotsu Bowl"
         content="Mushroom miso broth served with maitake mushrooms, ramen noodles, seasoned egg, locally grown bean sprouts, fresh scallions, black garlic, and toasted sesame. (dairy free, contains peanut oil)"
