@@ -6,7 +6,7 @@ interface CardProps {
   menuItem: string;
   content: string;
   link?: string; // redirection link
-  price: string;
+  price: number;
   imageUrl?: string; // Optional prop
 }
 
@@ -25,12 +25,12 @@ export default function Card({
         <div className="max-w-sm rounded overflow-hidden border-[#C6322D] border-2 rounded-lg">
           <img className="w-full" src={imageUrl} alt="ramen item" />
           <div className="px-6 py-4">
-            <div className="font-bold text-xl mb-2 font-typewriter">
+            <div className="font-bold text-xl mb-2 font-nunito">
               {menuItem}
             </div>
-            <section className="text-gray text-base font-typewriter">
+            <section className="text-gray text-base font-nunito">
               <p>{content}</p>
-              <p className="pt-4 pb-4">{price}</p>
+              <p className="pt-4 pb-4">${price.toFixed(2)}</p>
             </section>
           </div>
         </div>

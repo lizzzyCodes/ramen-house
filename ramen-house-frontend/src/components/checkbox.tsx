@@ -1,9 +1,12 @@
 import React, { useState } from "react";
-
+// Each individual checkbox
 interface CheckboxProps {
   label: string;
   price?: number | undefined; // Optional extra price
   isPopular?: boolean | undefined; // Optional popular tag
+  isChecked?: boolean;
+  onChange?: (label: string) => void;
+  disabled?: boolean | undefined;
 }
 
 export default function CheckBox({ label, price, isPopular }: CheckboxProps) {
@@ -14,21 +17,21 @@ export default function CheckBox({ label, price, isPopular }: CheckboxProps) {
   };
 
   return (
-    <div className="mb-4 font-typewriter">
-      <div className="flex items-start">
+    <div className="mb-4 font-nunito">
+      <div className="flex items-center">
         <input
           type="checkbox"
           checked={isChecked}
           onChange={handleCheckboxChange}
           className="mr-2"
         />
-        <label className="flex-grow">
+        <label className="flex-grow flex items-center">
           <span className="">{label}</span>
         </label>
       </div>
 
       <div className="ml-6 mt-1">
-        <span className="text-gray">+${price?.toFixed(2)}</span>
+        {price && <span className="text-gray">+${price?.toFixed(2)}</span>}
       </div>
 
       <div className="ml-6 mt-1">

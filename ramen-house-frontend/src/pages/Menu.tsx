@@ -1,17 +1,23 @@
 import Card from "../components/card";
 import Header from "../components/header";
+import { menuData } from "../data/mockData";
 
 function Menu() {
   return (
     <div>
-      <Header text="Ramen"/>
-      <Card
-        menuItem="Tonkotsu Bowl"
-        content="Mushroom miso broth served with maitake mushrooms, ramen noodles, seasoned egg, locally grown bean sprouts, fresh scallions, black garlic, and toasted sesame. (dairy free, contains peanut oil)"
-        imageUrl="/images/TonkotsuBowl.jpg"
-        price="$18.00"
-        link="/menu-item"
-      />
+      <Header text="RAMEN" />
+      <div>
+        {menuData.map((item) => (
+          <Card
+            key={item.id}
+            menuItem={item.title}
+            content={item.description}
+            imageUrl={item.imageUrl}
+            price={item.bowlPrice}
+            link={`/menu-item/${item.id}`} // Link with ID for redirection
+          />
+        ))}
+      </div>
     </div>
   );
 }

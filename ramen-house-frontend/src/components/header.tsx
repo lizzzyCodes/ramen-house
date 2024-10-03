@@ -1,5 +1,5 @@
 interface HeaderProps {
-  text: string;
+  text: string | undefined;
   font?: string; // Optional font
   size?: string;
 }
@@ -8,7 +8,7 @@ function Header({ text, font, size }: HeaderProps) {
   // Determine the class based on the size prop
 
   return (
-    <div className={`${font} ${size} pt-6 font-bold`}>
+    <div className={`${font} ${size} pt-4 font-bold text-[32px] pl-4`}>
       <div>
         <h1>{text}</h1>
       </div>
@@ -16,4 +16,4 @@ function Header({ text, font, size }: HeaderProps) {
   );
 }
 export default Header;
-// subheading and  text typewriter header monsterrat?
+// subheading and  text nunito header monsterrat?

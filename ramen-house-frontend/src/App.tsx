@@ -23,8 +23,8 @@ function App() {
         />
         {/* Menu */}
         <Route path="/menu" element={<Menu />} />
-        {/* Customizing Item / Order*/}
-        <Route path="/menu-item" element={<MenuItem />} />
+        {/* Customizing Item / Order data will get rendered by ID*/}
+        <Route path="/menu-item/:id" element={<MenuItem />} />
         {/* Confirmation and Payment*/}
         <Route path="/payment-confirmation" element={<Confirmation />} />
       </Routes>
