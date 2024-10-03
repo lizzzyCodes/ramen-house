@@ -15,13 +15,13 @@ function MenuItem() {
   const ramenItem = id
     ? menuData.find((item) => item.id === parseInt(id, 10))
     : null;
-  console.log(ramenItem, "does this print everything?");
+  console.log(ramenItem, "does this print everything? [ec]");
   return (
     <div className="max-w-md mx-auto p-4 md:max-w-2xl md:p-8 font-nunito">
       <Link to={"/menu"} className="text-3xl">
         <IoIosClose />
       </Link>
-      <section about="header and infomation" className="pt-2 pb-4">
+      <section about="header and information" className="pt-2 pb-4">
         <Header
           text={ramenItem?.title}
           font="font-montserrat"

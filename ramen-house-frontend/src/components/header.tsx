@@ -8,7 +8,7 @@ function Header({ text, font, size }: HeaderProps) {
   // Determine the class based on the size prop
 
   return (
-    <div className={`${font} ${size} pt-4 font-bold text-[32px] pl-4`}>
+    <div className={`${font} ${size} pt-4 font-bold text-[32px]`}>
       <div>
         <h1>{text}</h1>
       </div>
