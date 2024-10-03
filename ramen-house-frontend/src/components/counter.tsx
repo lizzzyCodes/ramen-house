@@ -3,8 +3,13 @@ import React, { useState } from "react";
 import PrimaryButton from "./primaryButton";
 import { FiPlusCircle } from "react-icons/fi";
 import { FiMinusCircle } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
-const AddCounter = () => {
+interface CounterProps {
+  price: number | undefined;
+}
+
+const Counter = ({ price }: CounterProps) => {
   const [count, setCount] = useState(1); // Default is one item
 
   const handleIncrement = () => {
@@ -26,9 +31,15 @@ const AddCounter = () => {
       <button onClick={handleIncrement} className="text-black p-2">
         <FiPlusCircle />
       </button>
-      <PrimaryButton text={`Add to Cart ($${(count * 3).toFixed(2)})`} />
+      <Link to={"/menu"}>
+        {price && (
+          <PrimaryButton
+            text={`Add to Cart ($${(count * price).toFixed(2)})`}
+          />
+        )}
+      </Link>
     </div>
   );
 };
 
-export default AddCounter;
+export default Counter;

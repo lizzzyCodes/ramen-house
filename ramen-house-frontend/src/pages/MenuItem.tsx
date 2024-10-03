@@ -7,15 +7,14 @@ import PrimaryButton from "../components/primaryButton";
 import RamenSelection from "../components/selection";
 import { menuData } from "../data/mockData";
 import { useParams } from "react-router-dom";
-import AddCounter from "../components/counter";
+import Counter from "../components/counter";
 
 function MenuItem() {
   // grab the id from the mockData
-  const { id } = useParams<{ id: string }>(); // Get the ID from the URL
+  const { id } = useParams<{ id: string }>();
   const ramenItem = id
     ? menuData.find((item) => item.id === parseInt(id, 10))
     : null;
-  console.log(ramenItem, "does this print everything? [ec]");
   return (
     <div className="max-w-md mx-auto p-4 md:max-w-2xl md:p-8 font-nunito">
       <Link to={"/menu"} className="text-3xl">
@@ -60,10 +59,7 @@ function MenuItem() {
         font="font-nunito"
       />
       <RamenSelection data={ramenItem?.soupBase} />
-      <AddCounter />
-      <Link to={"/menu"}>
-        <PrimaryButton text="Add to cart total_here" />
-      </Link>
+      <Counter price={ramenItem?.bowlPrice} />
     </div>
   );
 }

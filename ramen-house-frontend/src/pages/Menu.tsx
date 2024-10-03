@@ -7,9 +7,9 @@ function Menu() {
     <div>
       <div about="header and logo" className="flex items-center pl-6 pt-4 ">
         <img
-          src="favicon.ico" // Update this to the actual path of your logo
+          src="favicon.ico"
           alt="ramen logo"
-          className="h-10 w-auto" // Adjust height and width as needed
+          className="h-10 w-auto"
         />
         <h1 className="pl-4 font-bold text-[32px]">RAMEN HOUSE</h1>
       </div>
