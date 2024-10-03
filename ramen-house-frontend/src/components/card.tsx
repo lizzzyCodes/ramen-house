@@ -23,7 +23,7 @@ export default function Card({
         {" "}
         {/* Fallback to '/' if link is undefined */}
         <div className="max-w-sm rounded overflow-hidden border-[#C6322D] border-2 rounded-lg">
-          <img className="w-full" src={imageUrl} alt="ramen item" />
+          <img className="w-full w-[380px] h-[219px] " src={imageUrl} alt="ramen item" />
           <div className="px-6 py-4">
             <div className="font-bold text-xl mb-2 font-nunito">
               {menuItem}

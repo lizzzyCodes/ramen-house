@@ -5,16 +5,16 @@ interface CheckboxProps {
   price?: number | undefined; // Optional extra price
   isPopular?: boolean | undefined; // Optional popular tag
   isChecked?: boolean;
-  onChange?: (label: string) => void;
   disabled?: boolean | undefined;
 }
 
-export default function CheckBox({ label, price, isPopular }: CheckboxProps) {
+export default function CheckBox({
+  label,
+  price,
+  isPopular,
+}: CheckboxProps) {
   const [isChecked, setIsChecked] = useState(false);
 
-  const handleCheckboxChange = () => {
-    setIsChecked(!isChecked);
-  };
 
   return (
     <div className="mb-4 font-nunito">
@@ -22,7 +22,6 @@ export default function CheckBox({ label, price, isPopular }: CheckboxProps) {
         <input
           type="checkbox"
           checked={isChecked}
-          onChange={handleCheckboxChange}
           className="mr-2"
         />
         <label className="flex-grow flex items-center">

@@ -15,9 +15,9 @@ function Home({ imageUrl }: Props) {
       </div>
 
       <Link to={"/menu" || "/"}>
-        <button className="border-white border-4 fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-burgundy text-white font-bold w-32 h-32 flex flex-col items-center justify-center rounded-full text-center md:fixed md:top-1/2 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2">
-          <span className="text-sm md:text-lg">Tap To</span>
-          <span className="text-sm md:text-lg">Order</span>
+        <button className="border-white border-4 fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-burgundy text-white font-bold w-32 h-32 flex flex-col items-center justify-center rounded-full text-center md:w-48 md:h-48 lg:w-56 lg:h-56 md:fixed md:top-1/2 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2">
+          <span className="text-md md:text-lg lg:text-xl">Tap To</span>
+          <span className="text-md md:text-lg lg:text-xl">Order</span>
         </button>
       </Link>
     </div>
