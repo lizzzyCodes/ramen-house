@@ -17,9 +17,9 @@ export const menuData = [
     ],
     spice: [
       { label: "No Spice" },
-      { label: "Level 1" },
-      { label: "Level 2" },
-      { label: "Level 3" },
+      { label: "Level 1" }, // mild
+      { label: "Level 2" }, // medium
+      { label: "Level 3" }, // hot
     ],
   },
   {
